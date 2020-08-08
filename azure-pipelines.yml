@@ -37,7 +37,7 @@ steps:
 # 这里由于我有两个page托管仓库需要部署，所以需要添加 git.dev.tencent.com 的 fingerprint 到 known_hosts
 - script: |
     # ssh-keyscan -t rsa git.dev.tencent.com >> ~/.ssh/known_hosts
-    # git config --global user.name "imaegoo-az"
-    # git config --global user.email "mail1st@qq.com"
+    git config --global user.name "bearfighting"
+    git config --global user.email "florentxingwenfeng@hotmail.com"
     hexo d
   displayName: 'Deploying...'
