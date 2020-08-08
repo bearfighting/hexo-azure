@@ -38,6 +38,6 @@ steps:
 - script: |
     # ssh-keyscan -t rsa git.dev.tencent.com >> ~/.ssh/known_hosts
     git config --global user.name "bearfighting"
-    git config --global user.email "florentxingwenfeng@hotmail.com"
+    git config --global user.email "florentxingwenfeng@gmail.com"
     hexo d
   displayName: 'Deploying...'
