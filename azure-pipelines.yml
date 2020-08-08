@@ -17,7 +17,7 @@ steps:
 
 - task: InstallSSHKey@0 # 导入SSH
   inputs:
-    knownHostsEntry: github.com,140.82.112.4 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+    knownHostsEntry: github.com,140.82.112.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
     sshPublicKey: ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMKuvAySBGxoxGO3Ci32anREpTVkpJET9HxcYyjjHdXREIcVVbgRYtW5bSELVr4ib1moty/fg5h+GlrYE1GULmElndGQcCD1tENESVKH3Nf/8NhTBfn26ZSmohnT0kvqtKGljin+k0UAIvLsMdbI9s5hVR2dMG5bbFMgBDls8KPEwggG6O45rA/G50IQ3hfFnwUaz3B/T/3pDuSHgl6W03j3ynY9rJsEsufnWchcQFcpL3wGjHmSe32jy6DWvXiBoLdpETOKh6pIxSng/LDz6E1XeP/d9IJP03NhAUcXOumFAxbq/1FH1r9vLcqKqVmj61us7j4QaBh9oLIf+r0sIJ0xGAu3Ty0vmdirXgW18513N8xn/i+dLKWQswv2GL4AXKhsktVWcqiGH8yivCBgo03JKC0tNsJcX79trl4z5LslZaLayiCZU5/PUc6gcO/NtkkVnV+sPDx6CI+aFdqAgCQAJzRzfD6VfZJ1bUgoLSivCJuo5ezphVn+M8UlbqY3s= xingwenfeng@DESKTOP-FMTF8CN # 对应id_rsa.pub
     sshKeySecureFile: id_rsa # 对应私钥文件名
   displayName: 'Installing SSH...'
@@ -36,7 +36,6 @@ steps:
 
 # 这里由于我有两个page托管仓库需要部署，所以需要添加 git.dev.tencent.com 的 fingerprint 到 known_hosts
 - script: |
-    # ssh-keyscan -t rsa git.dev.tencent.com >> ~/.ssh/known_hosts
     git config --global user.name "bearfighting"
     git config --global user.email "florentxingwenfeng@hotmail.com"
     hexo d
